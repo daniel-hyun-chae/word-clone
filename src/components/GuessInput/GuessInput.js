@@ -14,6 +14,7 @@ function GuessInput({ addNewGuess }) {
         id="guess-input"
         type="text"
         value={guess}
+        required
         pattern="\w{5,5}"
         onChange={(e) => {
           setGuess(e.target.value.toUpperCase());
