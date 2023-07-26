@@ -1,6 +1,6 @@
 import React from "react";
 
-function GuessInput({ addNewGuess }) {
+function GuessInput({ addNewGuess, disabled }) {
   const [guess, setGuess] = React.useState("");
   function onSubmit(e) {
     e.preventDefault();
@@ -14,6 +14,7 @@ function GuessInput({ addNewGuess }) {
         id="guess-input"
         type="text"
         value={guess}
+        disabled={disabled}
         required
         pattern="\w{5,5}"
         onChange={(e) => {
